@@ -1,0 +1,70 @@
+/*Estilis Generales*/
+.h1-strong{
+  border-bottom: 1px solid #28a745;
+  font-size: 30px;
+  font-weight: bold;
+  margin-left: 25px;
+  padding-bottom: 15px;
+  color: green;
+  margin-top: 40px;
+
+  
+}
+
+/*color de los label*/
+p label{
+  color: green;
+}
+/*Navegación*/
+.navigation{
+  padding: 0px !important;
+  
+}
+.navigation .navbar{
+  border-radius: 0px !important;
+  background: #28a745 !important; 
+  border: none;
+  height: 120px !important;
+}
+
+/* Estilos para el nombre de la página*/
+.navigation .navbar .navbar-header{
+  color: white !important;
+  font-size: 35px;
+ font-weight: bold;
+ font-style: italic;
+}
+
+
+/* Estilos para los enlaces*/
+.navigation .navbar .nav li .nav-link{
+  color: white !important;
+  
+}
+
+/*Estilos para el footer*/
+.container-footer{
+  color: white;
+  height: 40px;
+  font-size: 15px;
+  margin-top: 20px;
+  background: #28a745;
+  overflow: hidden;
+  padding: 0px;
+
+}
+/*Estilos para el contenedor del footer*/
+.container-footer span{
+  line-height: 40px;
+}
+
+/*Estilos para el contenedor del formulario */
+ .container-signup{
+   background: #fafafa;
+  box-shadow: 0px 2px 3px #eee;
+  border-radius: 0px 10x 0px 10px;
+  margin: 0px;
+  padding: 0px;
+  
+}
+

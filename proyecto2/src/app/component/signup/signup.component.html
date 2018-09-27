@@ -1,0 +1,92 @@
+<div class="col-lg-6 offset-3 col-sm-12  container-signup">
+    
+    <h1 class="h1-strong">{{title}}</h1>
+
+    <form #signupForm="ngForm" (ngSubmit) ="onSubmit(signupForm)" class="col-lg-12 col-sm-12 col-md-12">
+      <!--campo para el apellido--> 
+      <p>
+          <label >Cédula:</label>
+          <input type="text" placeholder="cedula" name="id" #id="ngModel"[(ngModel)]=" user.cedula" class="form-control" required>
+          <span *ngIf="!id.valid && id.touched">
+           El  Campo Cédula es  requerido.....
+          </span>
+        </p>
+      <p>
+        <label > Primer Nombre:</label>
+        <input type="text" placeholder=" Primer Nombre" name="name" #name="ngModel"[(ngModel)]=" user.primer_nombre" class="form-control" required>
+        <span *ngIf="!name.valid && name.touched">
+         El  Campo Primer Nombre es  requerido.....
+        </span>
+      </p>
+
+
+      <p>
+          <label >Segundo Nombre:</label>
+          <input type="text" placeholder=" Segundo Nombre" name="name2" #name2="ngModel"[(ngModel)]=" user.segundo_nombre" class="form-control">
+         
+        </p>
+      
+
+      
+    <!--campo para el apellido-->
+      <p>
+          <label > Primer Apellido:</label>
+          <input type="text" placeholder=" Primer Apellido" name="surname" #surname="ngModel"[(ngModel)]=" user.primer_apellido" class="form-control" required>
+          <span *ngIf="!surname.valid && surname.touched">
+           El  Campo Primer Apellido es  requerido.
+          </span>   
+        </p>
+
+
+        <p>
+            <label > Segundo Apellido:</label>
+            <input type="text" placeholder="Segundo Apellido" name="surname2" #surname2="ngModel"[(ngModel)]=" user.segundo_apellido" class="form-control" >
+   
+          </p>
+
+
+
+          <p>
+              <label > Correo Electrónico:</label>
+              <input type="email" placeholder="Correo Electrónico" name="email" #email="ngModel"[(ngModel)]=" user.email" class="form-control" required  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+              <span *ngIf="!email.valid && email.touched">
+               El  Campo Correo Electrónoco es   requerido.
+              </span>   
+            </p>
+
+
+            <p>
+                <label > Dirección:</label>
+                <input type="text" placeholder="Dirección" name="address" #address="ngModel"[(ngModel)]=" user.direcion" class="form-control" required>
+                <span *ngIf="!address.valid && address.touched">
+                 El  Campo Campo Dirección es   requerido.
+                </span>   
+              </p>
+
+              <p>
+                  <label > Ciudad:</label>
+                  <input type="text" placeholder="Ciudad" name="address" #city="ngModel"[(ngModel)]=" user.ciudad" class="form-control" required>
+                  <span *ngIf="!city.valid && city.touched">
+                   El  Campo Ciudad es requerido.
+                  </span>   
+                </p>
+
+
+    
+              <p>
+                  <label > Contraseña:</label>
+                  <input type="password" placeholder="Contraseña" name="password" #password="ngModel"[(ngModel)]=" user.password" class="form-control" required>
+                  <span *ngIf="!password.valid && password.touched">
+                   El  Campo Campo Contraseña es   requerido.
+                  </span>   
+                </p>
+            
+      
+        <input type="submit" value="{{title}}" class="btn btn-success" [disabled] ="!signupForm.form.valid">
+      
+    </form>
+
+</div>
+
+
+
